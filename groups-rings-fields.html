@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What did Buhayan learn?</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>What Did Buhayan Learn?? 🤔</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">I. Counting</a></li>
+            <li><a href="algebraic-structures.html">II. Algebraic Structures</a></li>
+            <li><a href="groups-rings-fields.html">III. Groups, Rings, and Fields</a></li>
+            <li><a href="discrete-probability.html">IV. Discrete Probability</a></li>
+            <li><a href="graphs.html">V. Graphs</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="topic-page">
+            <h2>III. Groups, Rings, and Fields</h2>
+            <p class="topic-introduction">
+                Groups, Rings, and Fields are fundamental algebraic structures that appear in many areas of mathematics and have significant applications in computer science, physics, and chemistry. They are sets equipped with one or more binary operations that satisfy specific axioms, building upon the general concept of algebraic structures.
+            </p>
+            <article class="sub-topic">
+                <h3>A. Groups</h3>
+                <p>
+                    <strong>What it is:</strong> A group is a set G equipped with a single binary operation (often denoted as * or +) that satisfies four fundamental properties (axioms):
+                    <ol>
+                        <li><strong>Closure:</strong> For all a, b in G, the result of the operation, a * b, is also in G.</li>
+                        <li><strong>Associativity:</strong> For all a, b, c in G, (a * b) * c = a * (b * c).</li>
+                        <li><strong>Identity Element:</strong> There exists an element e in G (the identity element) such that for every element a in G, e * a = a * e = a.</li>
+                        <li><strong>Inverse Element:</strong> For each element a in G, there exists an element b in G (the inverse of a, often denoted a<sup>-1</sup> or -a) such that a * b = b * a = e.</li>
+                    </ol>
+                    If the operation is also commutative (a * b = b * a for all a, b in G), the group is called an <strong>Abelian group</strong>.
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>B. Rings</h3>
+                <p>
+                    <strong>What it is:</strong> A ring is a set R equipped with two binary operations, typically called addition (+) and multiplication (·), such that:
+                    <ol>
+                        <li>(R, +) is an Abelian group (satisfies closure, associativity, identity, inverse for addition, and commutativity of addition).</li>
+                        <li>Multiplication is associative: For all a, b, c in R, (a · b) · c = a · (b · c).</li>
+                        <li>Multiplication distributes over addition (distributive laws):
+                            <ul>
+                                <li>For all a, b, c in R, a · (b + c) = (a · b) + (a · c) (left distributivity).</li>
+                                <li>For all a, b, c in R, (b + c) · a = (b · a) + (c · a) (right distributivity).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    A ring may or may not have a multiplicative identity (an element 1 such that 1·a = a·1 = a). If it does, it's called a "ring with unity." Multiplication does not need to be commutative in a general ring. If it is, the ring is called a "commutative ring."
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>C. Fields</h3>
+                <p>
+                    <strong>What it is:</strong> A field is a commutative ring with unity (a multiplicative identity element '1') in which every non-zero element has a multiplicative inverse. Essentially, a field is an algebraic structure where you can perform addition, subtraction, multiplication, and division (by non-zero elements) and these operations behave as they do with rational or real numbers.
+                    Specifically, a set F with two operations + and · is a field if:
+                    <ol>
+                        <li>(F, +) is an Abelian group (with additive identity 0).</li>
+                        <li>(F \ {0}, ·) is an Abelian group (i.e., the set of non-zero elements forms an Abelian group under multiplication, with multiplicative identity 1).</li>
+                        <li>Multiplication distributes over addition.</li>
+                    </ol>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>Where can all this be used?</h3>
+                <p>
+                    <strong>Diffie-Hellman Key Exchange: </strong> Based on the difficulty of the discrete logarithm problem in cyclic groups (often multiplicative groups of finite fields).<br>
+                    <strong>Elliptic Curve Cryptography (ECC): </strong> Uses groups formed by points on an elliptic curve over a finite field. Operations are "adding" points. ECC offers strong security with smaller key sizes. <br>
+                    <strong>Symmetry in Physical Laws:  </strong> Lie groups (continuous groups) are essential in modern physics, describing symmetries of physical systems. For example, the Standard Model of particle physics is based on gauge groups (like U(1), SU(2), SU(3)). <br>
+                    <strong>Crystallography: </strong> The classification of crystal structures is based on space groups, which describe their symmetries. <br>
+                    <strong>Rubik's Cube:</strong>  The set of all possible moves on a Rubik's Cube forms a group. Group theory can be used to analyze solutions and properties of the puzzle. (I miss my speedcubing era)<br>
+                </p>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

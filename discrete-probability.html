@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What did Buhayan learn?</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>What Did Buhayan Learn?? 🤔</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">I. Counting</a></li>
+            <li><a href="algebraic-structures.html">II. Algebraic Structures</a></li>
+            <li><a href="groups-rings-fields.html">III. Groups, Rings, and Fields</a></li>
+            <li><a href="discrete-probability.html">IV. Discrete Probability</a></li>
+            <li><a href="graphs.html">V. Graphs</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="topic-page">
+            <h2>IV. Discrete Probability</h2>
+            <p class="topic-introduction">
+                Discrete probability deals with the likelihood of events occurring in situations where the set of possible outcomes (the sample space) is finite or countably infinite. It provides a mathematical framework for quantifying uncertainty and making predictions in scenarios involving chance.
+            </p>
+            <p class="topic-real-life">
+                <strong>Real-life context:</strong> Discrete probability is used everywhere, from determining the odds in games of chance (like lotteries or card games) and weather forecasting, to risk assessment in finance and insurance, quality control in manufacturing, and the effectiveness of medical treatments.
+            </p>
+
+            <article class="sub-topic">
+                <h3>A. Probability Theorems & Axioms</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Probability theory is built upon a few fundamental axioms and rules:
+                    <ul>
+                        <li><strong>Axiom 1:</strong> For any event E, 0 ≤ P(E) ≤ 1. (Probabilities are non-negative and no greater than 1).</li>
+                        <li><strong>Axiom 2:</strong> P(S) = 1. (The probability of the entire sample space, i.e., that some outcome occurs, is 1).</li>
+                        <li><strong>Axiom 3 (For mutually exclusive events):</strong> If E<sub>1</sub>, E<sub>2</sub>, ..., E<sub>n</sub> are mutually exclusive events (i.e., they cannot occur at the same time, E<sub>i</sub> ∩ E<sub>j</sub> = Ø for i ≠ j), then P(E<sub>1</sub> ∪ E<sub>2</sub> ∪ ... ∪ E<sub>n</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) + ... + P(E<sub>n</sub>).</li>
+                    </ul>
+                    From these axioms, several important rules can be derived:
+                    <ul>
+                        <li><strong>Rule of Complement:</strong> P(E') = 1 - P(E), where E' is the complement of E (event E not happening).</li>
+                        <li><strong>Addition Rule (General):</strong> For any two events A and B, P(A ∪ B) = P(A) + P(B) - P(A ∩ B). (The probability of A or B or both occurring).</li>
+                        <li><strong>Conditional Probability:</strong> The probability of event A occurring given that event B has already occurred is P(A|B) = P(A ∩ B) / P(B), provided P(B) > 0.</li>
+                        <li><strong>Multiplication Rule:</strong> P(A ∩ B) = P(A|B)P(B) = P(B|A)P(A). (The probability of both A and B occurring).</li>
+                        <li><strong>Independence:</strong> Two events A and B are independent if the occurrence of one does not affect the probability of the other. If independent, P(A ∩ B) = P(A)P(B), and P(A|B) = P(A).</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>C. Bayes' Theorem</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Bayes' Theorem describes how to update the probability of a hypothesis based on new evidence. It relates the conditional probability of an event A given B, to the conditional probability of B given A. The formula is:
+                    <br>
+                    <strong>P(H|E) = [P(E|H) * P(H)] / P(E)</strong>
+                    <br>
+                    Where:
+                    <ul>
+                        <li>P(H|E) is the <strong>posterior probability</strong>: the probability of hypothesis H being true after observing evidence E.</li>
+                        <li>P(E|H) is the <strong>likelihood</strong>: the probability of observing evidence E if hypothesis H is true.</li>
+                        <li>P(H) is the <strong>prior probability</strong>: the initial probability of hypothesis H being true before observing evidence E.</li>
+                        <li>P(E) is the <strong>evidence probability (or marginal likelihood)</strong>: the total probability of observing evidence E. It can be calculated as P(E) = P(E|H)P(H) + P(E|¬H)P(¬H) for a simple case with H and its complement ¬H.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>D. Expected Value and Variance</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    <ul>
+                        <li><strong>Expected Value (E[X] or μ):</strong> For a discrete random variable X that can take values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> with probabilities P(X=x<sub>1</sub>), P(X=x<sub>2</sub>), ..., P(X=x<sub>n</sub>), the expected value is the weighted average of these values:
+                        <br>
+                        E[X] = Σ [x<sub>i</sub> * P(X=x<sub>i</sub>)]
+                        <br>
+                        It represents the long-run average outcome if the experiment is repeated many times.
+                        </li>
+                        <li><strong>Variance (Var(X) or σ<sup>2</sup>):</strong> Measures the spread or dispersion of the random variable's values around its expected value.
+                        <br>
+                        Var(X) = E[(X - E[X])<sup>2</sup>] = Σ [(x<sub>i</sub> - E[X])<sup>2</sup> * P(X=x<sub>i</sub>)]
+                        <br>
+                        An alternative formula is Var(X) = E[X<sup>2</sup>] - (E[X])<sup>2</sup>.
+                        </li>
+                        <li><strong>Standard Deviation (σ):</strong> The square root of the variance (σ = √Var(X)). It is in the same units as the random variable, making it easier to interpret the spread.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>Where can all this be used?</h3>
+                <p>
+                    <strong>Gaming: </strong> Calculating chances of winning a dice or card game<br>
+                    <strong>Cybersecurity: </strong> Predicting likelihood of attack vectors or password cracking <br>
+                    <strong>Operations Research:  </strong>Modeling queue systems, machine failures (discrete events) <br>
+                    <strong>Epidemiology: </strong> Counting number of cases or outbreaks (discrete counts of events) <br>
+                    <strong>Genetics: </strong> Probabilities of trait inheritance (Punnett squares, Mendelian genetics)<br>
+                </p>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>

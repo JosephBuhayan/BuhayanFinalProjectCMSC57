@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What did Buhayan learn?</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>What Did Buhayan Learn?? 🤔</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">I. Counting</a></li>
+            <li><a href="algebraic-structures.html">II. Algebraic Structures</a></li>
+            <li><a href="groups-rings-fields.html">III. Groups, Rings, and Fields</a></li>
+            <li><a href="discrete-probability.html">IV. Discrete Probability</a></li>
+            <li><a href="graphs.html">V. Graphs</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="topic-page">
+            <h2>I. Counting</h2> 
+            <p class="topic-introduction">
+               Counting, also known as combinatorics or enumerative combinatorics, is the first topic we learned on CMSC 57. On this topic we learned about the following:
+            </p>
+            <article class="sub-topic">
+                <h3>A. Basics of Counting (Sum and Product Rule)</h3>
+                <p>
+                    <strong>What it is:</strong> The Rule of Sum states if a task can be done in one of w1 ways or in one of w2 ways (mutually exclusive), there are w1 + w2 ways. The Rule of Product states if a procedure has two tasks, with w1 ways for the first and w2 for the second (after the first), there are w1 * w2 ways.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    Rule of Sum: Choosing between 3 bus routes or 2 train routes gives 3 + 2 = 5 ways to get to school.
+                    Rule of Product: A restaurant with 5 main courses and 3 desserts offers 5 * 3 = 15 different two-course meals.
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>B. Pigeonhole Principle</h3>
+                <p>
+                    <strong>What it is:</strong> If you have more pigeons than pigeonholes, then at least one pigeonhole must contain more than one pigeon.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong> In a group of 367 people, at least two must share the same birthday (as there are 366 possible birthdays).
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>C. Permutations and Combinations</h3>
+                <p>
+                    <strong>What it is:</strong> Permutations count arrangements of items where order matters, while combinations count selections where order does not matter.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong> 
+                    Permutation: Arranging 3 books on a shelf (A, B, C) can be done in 6 ways (ABC, ACB, BAC, BCA, CAB, CBA).
+                    Combination: Choosing 2 out of 5 fruits (apple, banana, cherry, date, elderberry) can be done in 10 ways (AB, AC, AD, AE, BC, BD, BE, CD, CE, DE).
+                </p>
+            </article>
+            <article class="sub-topic">
+                <h3>D. Binomial Coefficients</h3>
+                <p>
+                    <strong>What it is:</strong> Binomial coefficients count the number of ways to choose k items from n items, denoted as C(n, k) or "n choose k".
+                </p>
+                <p>
+                    <strong>Real-life example:</strong> Choosing 2 toppings from 5 available pizza toppings can be done in C(5, 2) = 10 ways.
+                </p>
+            </article>
+            <article class="sub-topic">
+                <h3>E. Generalized Permutation and Computation</h3>
+                <p>
+                    <strong>What it is:</strong> Generalized permutations extend the concept of permutations to cases where items can repeat or have restrictions.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong> Arranging 3 letters from the set {A, B, C} with repetition allowed can yield arrangements like AAA, AAB, ABA, etc.
+                </p>
+            </article>
+            <article class="sub-topic">
+                <h3>Where can all this be used?</h3>
+                <p>
+                    <strong>Algorithm Analysis: </strong> Determining the number of steps an algorithm takes (its complexity). <br>
+                    <strong>Probability: </strong> Calculating probabilities often requires counting the number of favorable outcomes and the total number of possible outcomes. <br>
+                    <strong>Network Design: </strong> Counting paths, connections, or configurations in networks. <br>
+                    <strong>Database Design: </strong> Estimating the number of possible entries or states. <br>
+                    <strong>Cryptography: </strong> Counting keys, combinations, or configurations in cryptographic systems. <br>
+                    <strong>Game Theory: </strong> Analyzing strategies and outcomes in games often involves counting possible moves or configurations. <br>
+                    <strong>Problem Solving: </strong> Many logical puzzles and problems can be solved using counting techniques. <br>
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

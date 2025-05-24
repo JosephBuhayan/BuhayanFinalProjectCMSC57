@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What did Buhayan learn?</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>What Did Buhayan Learn?? 🤔</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">I. Counting</a></li>
+            <li><a href="algebraic-structures.html">II. Algebraic Structures</a></li>
+            <li><a href="groups-rings-fields.html">III. Groups, Rings, and Fields</a></li>
+            <li><a href="discrete-probability.html">IV. Discrete Probability</a></li>
+            <li><a href="graphs.html">V. Graphs</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="topic-page">
+            <h2>V. Graphs</h2>
+            <p class="topic-introduction">
+                In discrete mathematics, a graph is a structure used to model pairwise relations between objects. It consists of 'vertices' (or 'nodes') and 'edges' (or 'links') that connect pairs of vertices. Graphs are incredibly versatile and form the basis for representing and analyzing networks, relationships, and processes in diverse fields.
+            </p>
+            <p class="topic-real-life">
+                <strong>Real-life context:</strong> Graphs are ubiquitous. They model social networks (Facebook, X), road networks (Google Maps), the internet (web pages and hyperlinks), biological networks (protein interactions), project dependencies, and circuit designs. Understanding graph theory allows us to solve problems related to routing, scheduling, optimization, and network analysis.
+            </p>
+
+            <article class="sub-topic">
+                <h3>A. Graphs and Graph Models</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    A graph G = (V, E) consists of:
+                    <ul>
+                        <li><strong>V:</strong> A non-empty set of vertices (or nodes).</li>
+                        <li><strong>E:</strong> A set of edges, where each edge connects two vertices (which could be the same vertex in the case of a loop).</li>
+                    </ul>
+                    Types of Graphs:
+                    <ul>
+                        <li><strong>Undirected Graph:</strong> Edges have no direction (e.g., a friendship on Facebook).</li>
+                        <li><strong>Directed Graph (Digraph):</strong> Edges have a direction (e.g., following someone on X, a one-way street).</li>
+                        <li><strong>Weighted Graph:</strong> Each edge has an associated numerical value (weight), representing cost, distance, capacity, etc.</li>
+                        <li><strong>Unweighted Graph:</strong> Edges do not have weights.</li>
+                        <li><strong>Simple Graph:</strong> An undirected graph with no loops (edges connecting a vertex to itself) and no multiple edges between the same pair of vertices.</li>
+                        <li><strong>Multigraph:</strong> Allows multiple edges between the same pair of vertices.</li>
+                    </ul>
+                    Graph models involve choosing the right type of graph to represent a real-world problem.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Social Network:</strong> Vertices represent people, and an undirected edge connects two people if they are friends.</li>
+                        <li><strong>Road Network:</strong> Vertices represent intersections or cities, and edges represent roads. A weighted graph can model distances or travel times. Directed edges can model one-way streets.</li>
+                        <li><strong>World Wide Web:</strong> Vertices represent web pages, and a directed edge from page A to page B exists if A links to B.</li>
+                        <li><strong>Task Dependencies:</strong> In project management, vertices can be tasks, and a directed edge from task A to task B means A must be completed before B can start.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>B. Graph Terminology and Special Types of Graphs</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Key Terminology:
+                    <ul>
+                        <li><strong>Adjacent Vertices (Neighbors):</strong> Two vertices are adjacent if there is an edge connecting them.</li>
+                        <li><strong>Degree of a Vertex (in an undirected graph):</strong> The number of edges incident to it (a loop counts twice).</li>
+                        <li><strong>In-degree/Out-degree (in a directed graph):</strong> In-degree is the number of edges pointing to a vertex; out-degree is the number of edges pointing away from it.</li>
+                        <li><strong>Path:</strong> A sequence of vertices such that from each of its vertices there is an edge to the next vertex in the sequence.</li>
+                        <li><strong>Cycle:</strong> A path that starts and ends at the same vertex and doesn't repeat edges or intermediate vertices.</li>
+                        <li><strong>Connected Graph (undirected):</strong> There is a path between every pair of distinct vertices.</li>
+                        <li><strong>Strongly Connected Graph (directed):</strong> There is a directed path from any vertex to any other vertex.</li>
+                    </ul>
+                    Special Types of Graphs:
+                    <ul>
+                        <li><strong>Complete Graph (K<sub>n</sub>):</strong> A simple undirected graph in which every pair of distinct vertices is connected by a unique edge. Has n(n-1)/2 edges.</li>
+                        <li><strong>Cycle Graph (C<sub>n</sub>):</strong> A graph consisting of a single cycle through n vertices (n ≥ 3).</li>
+                        <li><strong>Path Graph (P<sub>n</sub>):</strong> A graph whose vertices can be listed in an order v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>n</sub> such that the edges are {v<sub>i</sub>, v<sub>i+1</sub>} for i = 1, ..., n-1.</li>
+                        <li><strong>Wheel Graph (W<sub>n</sub>):</strong> A graph formed by connecting a single universal vertex to all vertices of a cycle C<sub>n-1</sub>.</li>
+                        <li><strong>Bipartite Graph:</strong> A graph whose vertices can be divided into two disjoint and independent sets, U and V, such that every edge connects a vertex in U to one in V.</li>
+                        <li><strong>Tree:</strong> A connected undirected graph with no cycles. It has n vertices and n-1 edges.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Complete Graph:</strong> A small group of people where everyone knows everyone else. A network where every computer is directly connected to every other computer.</li>
+                        <li><strong>Bipartite Graph:</strong> Modeling job applicants (set U) and job openings (set V), where an edge exists if an applicant is qualified for an opening. Useful in matching problems.</li>
+                        <li><strong>Tree:</strong> Family trees, organizational hierarchies, file system directory structures. In computer networks, spanning trees are used to prevent broadcast storms.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>C. Representing Graph and Graph Isomorphism</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Ways to represent graphs for computation:
+                    <ul>
+                        <li><strong>Adjacency List:</strong> For each vertex, store a list of its adjacent vertices. Efficient for sparse graphs (few edges).</li>
+                        <li><strong>Adjacency Matrix:</strong> A square matrix A where A[i][j] = 1 (or weight) if there is an edge from vertex i to vertex j, and 0 otherwise. Efficient for dense graphs (many edges) or when checking for an edge quickly is needed.</li>
+                        <li><strong>Incidence Matrix:</strong> A matrix where rows represent vertices and columns represent edges. M[v][e] = 1 if vertex v is an endpoint of edge e, and 0 otherwise.</li>
+                    </ul>
+                    <strong>Graph Isomorphism:</strong> Two graphs G<sub>1</sub> and G<sub>2</sub> are isomorphic if they are structurally identical, meaning there is a one-to-one correspondence (a bijection) between their vertex sets that preserves adjacency. If G<sub>1</sub> and G<sub>2</sub> are isomorphic, they are essentially the same graph drawn differently. Determining if two graphs are isomorphic can be a computationally hard problem.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Adjacency List/Matrix:</strong> How social network data (who is connected to whom) or road network data is stored in databases for applications like GPS navigation or friend suggestions.</li>
+                        <li><strong>Graph Isomorphism:</strong> In chemistry, identifying if two molecular structures are the same, even if depicted differently. In circuit design, checking if two circuit layouts are equivalent.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>D. Connectivity</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Connectivity explores how "connected" a graph is.
+                    <ul>
+                        <li><strong>Connected Components:</strong> Maximal connected subgraphs of an undirected graph.</li>
+                        <li><strong>Cut Vertex (Articulation Point):</strong> A vertex whose removal increases the number of connected components.</li>
+                        <li><strong>Cut Edge (Bridge):</strong> An edge whose removal increases the number of connected components.</li>
+                        <li><strong>Vertex Connectivity (κ(G)):</strong> The minimum number of vertices whose removal disconnects G or reduces it to a single vertex.</li>
+                        <li><strong>Edge Connectivity (λ(G)):</strong> The minimum number of edges whose removal disconnects G.</li>
+                    </ul>
+                    For directed graphs, similar concepts like strongly connected components exist.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Network Reliability:</strong> Identifying cut vertices or cut edges in a communication network (like the internet or a corporate network) helps find single points of failure. A network with higher vertex/edge connectivity is more robust.</li>
+                        <li><strong>Social Network Analysis:</strong> Finding connected components can identify distinct communities or groups within a larger network.</li>
+                        <li><strong>Transportation Networks:</strong> Identifying bridges (cut edges) in a road or rail network is crucial for planning detours during maintenance or emergencies.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>E. Shortest-Path Problem</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    The problem of finding a path between two vertices (or nodes) in a graph such that the sum of the weights of its constituent edges is minimized.
+                    Common algorithms include:
+                    <ul>
+                        <li><strong>Dijkstra's Algorithm:</strong> Finds the shortest path from a single source vertex to all other vertices in a graph with non-negative edge weights.</li>
+                        <li><strong>Bellman-Ford Algorithm:</strong> Finds the shortest path from a single source vertex to all other vertices, and can handle graphs with negative edge weights (also detects negative cycles).</li>
+                        <li><strong>Floyd-Warshall Algorithm:</strong> Finds the shortest paths between all pairs of vertices in a weighted graph.</li>
+                        <li><strong>A* Search Algorithm:</strong> An informed search algorithm that uses heuristics to guide its search, often faster than Dijkstra's for finding the shortest path between two specific nodes.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>GPS Navigation:</strong> Finding the shortest or fastest route between two locations (vertices are intersections/locations, edges are roads with weights like distance or travel time).</li>
+                        <li><strong>Network Routing:</strong> Internet routers use shortest-path algorithms (like OSPF, which is based on Dijkstra's) to determine the most efficient path for data packets to travel.</li>
+                        <li><strong>Airline Route Planning:</strong> Finding the cheapest or quickest sequence of flights between cities.</li>
+                        <li><strong>Robotics:</strong> Path planning for robots to navigate an environment.</li>
+                        <li><strong>Social Networks:</strong> Finding the "degrees of separation" between two people.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>F. Planar Graphs</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    A graph is planar if it can be drawn in a plane such that no two edges cross each other (they can only meet at a common vertex). A planar representation of a planar graph is called a plane graph.
+                    <ul>
+                        <li><strong>Kuratowski's Theorem:</strong> A graph is planar if and only if it does not contain a subgraph that is a subdivision of K<sub>5</sub> (the complete graph on five vertices) or K<sub>3,3</sub> (the complete bipartite graph with three vertices in each part, also known as the "utility graph").</li>
+                        <li><strong>Euler's Formula for Connected Plane Graphs:</strong> v - e + f = 2, where v is the number of vertices, e is the number of edges, and f is the number of faces (regions bounded by edges, including the outer unbounded region).</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Circuit Design (PCBs):</strong> When designing printed circuit boards, components (vertices) need to be connected by conductive paths (edges) on a flat surface. Planarity is crucial to avoid short circuits from crossing paths on a single layer. If a circuit graph is not planar, multiple layers are needed.</li>
+                        <li><strong>Utility Layout:</strong> The classic "three utilities problem" (can three houses each be connected to three utilities - gas, water, electricity - without any lines crossing?) is an example of K<sub>3,3</sub>, which is non-planar. This relates to planning infrastructure.</li>
+                        <li><strong>Map Design:</strong> Geographic maps can be thought of as planar graphs where regions are vertices and shared borders are edges.</li>
+                    </ul>
+                </p>
+            </article>
+
+            <article class="sub-topic">
+                <h3>G. Graph Coloring</h3>
+                <p>
+                    <strong>What it is:</strong>
+                    Graph coloring is an assignment of "colors" (labels, typically integers) to elements of a graph subject to certain constraints.
+                    <ul>
+                        <li><strong>Vertex Coloring:</strong> Assigning colors to vertices such that no two adjacent vertices share the same color. The goal is often to use the minimum number of colors, called the chromatic number (χ(G)).</li>
+                        <li><strong>Edge Coloring:</strong> Assigning colors to edges such that no two edges incident to the same vertex share the same color.</li>
+                    </ul>
+                    The Four Color Theorem states that any planar graph can be vertex-colored with at most four colors.
+                </p>
+                <p>
+                    <strong>Real-life example:</strong>
+                    <ul>
+                        <li><strong>Scheduling:</strong>
+                            <ul>
+                                <li><strong>Exam Scheduling:</strong> Vertices are exams, an edge connects two exams if at least one student is taking both. Colors represent time slots. The chromatic number gives the minimum number of time slots needed so no student has a conflict.</li>
+                                <li><strong>Task Scheduling:</strong> Tasks that cannot be done simultaneously (e.g., require the same resource) are connected by an edge. Colors are time slots or resources.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Map Coloring:</strong> Coloring countries or regions on a map such that no two adjacent regions have the same color. This was the original problem that led to the Four Color Theorem.</li>
+                        <li><strong>Frequency Assignment:</strong> Assigning radio frequencies to broadcasting towers (vertices). Towers that are close enough to interfere if using the same frequency are connected by an edge. Colors represent distinct frequencies.</li>
+                        <li><strong>Register Allocation in Compilers:</strong> Variables in a program are vertices, an edge connects two variables if they are "live" (in use) at the same time. Colors represent CPU registers. The goal is to assign variables to registers such that conflicting variables get different registers, minimizing the need to spill variables to memory.</li>
+                    </ul>
+                </p>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
